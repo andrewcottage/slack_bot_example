@@ -28,5 +28,7 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
-config :bot, api_token: ""
-config :bot, open_weather_token: ""
+
+config :bot, slack_api_token: System.get_env("SLACK_TOKEN")
+config :bot, wolfram_api_token: System.get_env("WOLFRAM_TOKEN")
+config :bot, open_weather_token: System.get_env("OPEN_WEATHER_TOKEN")

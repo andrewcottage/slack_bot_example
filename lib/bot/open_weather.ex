@@ -70,7 +70,7 @@ defmodule Bot.OpenWeather do
   end
 
   defp desc(response) do
-    [desc] = response["weather"]
+    [desc| _] = response["weather"]
     desc["description"]
   end
 

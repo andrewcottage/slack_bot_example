@@ -14,7 +14,7 @@ defmodule Bot.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :slack, :httpotion, :poison, :timex],
+    [applications: [:logger, :slack, :httpotion, :poison, :timex, :sweet_xml],
      mod: {Bot, []}]
   end
 
@@ -33,7 +33,8 @@ defmodule Bot.Mixfile do
       {:websocket_client, git: "https://github.com/jeremyong/websocket_client"},
       {:httpotion, "~> 3.0.0"},
       {:poison, "~> 2.0"},
-      {:timex, "~> 3.0"}
+      {:timex, "~> 3.0"},
+      {:sweet_xml, "~> 0.5.0"}
     ]
   end
 end

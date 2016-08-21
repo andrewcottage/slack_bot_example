@@ -9,9 +9,9 @@ defmodule Bot do
     # Define workers and child supervisors to be supervised
     children = [
       # Starts a worker by calling: Bot.Worker.start_link(arg1, arg2, arg3)
-      worker(Bot.SlackRtm, [Application.fetch_env!(:bot, :api_token)]),
-      worker(Bot.OpenWeather, [])
-
+      worker(Bot.SlackRtm, [Application.fetch_env!(:bot, :slack_api_token)]),
+      worker(Bot.OpenWeather, []),
+      worker(Bot.Wolfram, [])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
